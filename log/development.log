@@ -1,0 +1,709 @@
+Started GET "/" for 127.0.0.1 at 2019-10-05 15:15:55 +0900
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.1.4) lib/active_record/migration.rb:576:in `check_pending!'
+activerecord (5.1.4) lib/active_record/migration.rb:553:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+webpacker (3.0.1) lib/webpacker/dev_server_proxy.rb:17:in `perform_request'
+rack-proxy (0.6.2) lib/rack/proxy.rb:57:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20170914070302)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "is_done" boolean DEFAULT 'f' NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170914070302"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-05 06:16:20.648867"], ["updated_at", "2019-10-05 06:16:20.648867"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2019-10-05 15:16:26 +0900
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+
+./bin/webpack:26:in `exec': No such file or directory - /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/.bin/webpack (Errno::ENOENT)
+	from ./bin/webpack:26:in `block in <main>'
+	from ./bin/webpack:25:in `chdir'
+	from ./bin/webpack:25:in `<main>'
+
+  Rendered home/index.html.erb within layouts/application (260.3ms)
+Completed 500 Internal Server Error in 282ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Webpacker can't find todo.js in /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. Webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your Webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+    5:   </div>
+    6: </div>
+    7: 
+    8: <%= javascript_pack_tag 'todo' %>
+  
+app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb___3465009245394703084_70209987145600'
+Started GET "/" for 127.0.0.1 at 2019-10-05 15:22:02 +0900
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 7075764d188b4f884b12
+Version: webpack 4.41.0
+Time: 169ms
+Built at: 2019/10/05 15:22:03
+                                            Asset      Size              Chunks                         Chunk Names
+                   js/app-838d1a09512226198a5f.js  4.14 KiB                 app  [emitted] [immutable]  app
+               js/app-838d1a09512226198a5f.js.map  3.51 KiB                 app  [emitted] [dev]        app
+           js/application-3182dacccff678814a16.js   7.4 KiB         application  [emitted] [immutable]  application
+       js/application-3182dacccff678814a16.js.map  3.53 KiB         application  [emitted] [dev]        application
+      js/components/about-3d7d830370437f16cc68.js  4.25 KiB    components/about  [emitted] [immutable]  components/about
+  js/components/about-3d7d830370437f16cc68.js.map  3.54 KiB    components/about  [emitted] [dev]        components/about
+    js/components/contact-9ed66da16b445e979b4b.js  4.25 KiB  components/contact  [emitted] [immutable]  components/contact
+js/components/contact-9ed66da16b445e979b4b.js.map  3.54 KiB  components/contact  [emitted] [dev]        components/contact
+     js/components/header-e16139a9826d3f0f3cd3.js  4.23 KiB   components/header  [emitted] [immutable]  components/header
+ js/components/header-e16139a9826d3f0f3cd3.js.map  3.54 KiB   components/header  [emitted] [dev]        components/header
+      js/components/index-297861e3d2b54fbe0f5f.js   4.2 KiB    components/index  [emitted] [immutable]  components/index
+  js/components/index-297861e3d2b54fbe0f5f.js.map  3.54 KiB    components/index  [emitted] [dev]        components/index
+             js/hello_vue-c022da8ff21a463e1b9a.js  7.53 KiB           hello_vue  [emitted] [immutable]  hello_vue
+         js/hello_vue-c022da8ff21a463e1b9a.js.map  3.52 KiB           hello_vue  [emitted] [dev]        hello_vue
+         js/router/router-915ae945272df8be8afb.js   7.4 KiB       router/router  [emitted] [immutable]  router/router
+     js/router/router-915ae945272df8be8afb.js.map  3.53 KiB       router/router  [emitted] [dev]        router/router
+                  js/todo-277e2d222ebafbd82256.js  7.36 KiB                todo  [emitted] [immutable]  todo
+              js/todo-277e2d222ebafbd82256.js.map  3.51 KiB                todo  [emitted] [dev]        todo
+                                    manifest.json  3.06 KiB                      [emitted]              
+Entrypoint app = js/app-838d1a09512226198a5f.js js/app-838d1a09512226198a5f.js.map
+Entrypoint application = js/application-3182dacccff678814a16.js js/application-3182dacccff678814a16.js.map
+Entrypoint components/about = js/components/about-3d7d830370437f16cc68.js js/components/about-3d7d830370437f16cc68.js.map
+Entrypoint components/contact = js/components/contact-9ed66da16b445e979b4b.js js/components/contact-9ed66da16b445e979b4b.js.map
+Entrypoint components/header = js/components/header-e16139a9826d3f0f3cd3.js js/components/header-e16139a9826d3f0f3cd3.js.map
+Entrypoint components/index = js/components/index-297861e3d2b54fbe0f5f.js js/components/index-297861e3d2b54fbe0f5f.js.map
+Entrypoint hello_vue = js/hello_vue-c022da8ff21a463e1b9a.js js/hello_vue-c022da8ff21a463e1b9a.js.map
+Entrypoint router/router = js/router/router-915ae945272df8be8afb.js js/router/router-915ae945272df8be8afb.js.map
+Entrypoint todo = js/todo-277e2d222ebafbd82256.js js/todo-277e2d222ebafbd82256.js.map
+[./app/javascript/packs/app.vue] 291 bytes {app} [built] [failed] [1 error]
+[./app/javascript/packs/application.js] 3.5 KiB {application} [built] [failed] [1 error]
+[./app/javascript/packs/hello_vue.js] 3.64 KiB {hello_vue} [built] [failed] [1 error]
+[./app/javascript/packs/router/router.js] 3.5 KiB {router/router} [built] [failed] [1 error]
+[./app/javascript/packs/todo.js] 3.5 KiB {todo} [built] [failed] [1 error]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/hello_vue.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-plugin-syntax-dynamic-import' from '/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master'
+- Did you mean "@babel/syntax-dynamic-import"?
+    at Function.module.exports [as sync] (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/resolve/lib/sync.js:74:15)
+    at resolveStandardizedName (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:54:10)
+    at loadPlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:62:20)
+    at createDescriptor (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:50
+    at Array.map (<anonymous>)
+    at createDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPluginDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:105:10)
+    at plugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:40:19)
+    at mergeChainOpts (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:319:26)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:283:7
+    at buildRootChain (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:120:22)
+    at loadPrivatePartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:85:55)
+    at Object.loadPartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:110:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:144:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:194)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:364
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:97)
+    at Object._loader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:224:18)
+    at Object.loader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:60:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:55:12)
+
+ERROR in ./app/javascript/packs/todo.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-plugin-syntax-dynamic-import' from '/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master'
+- Did you mean "@babel/syntax-dynamic-import"?
+    at Function.module.exports [as sync] (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/resolve/lib/sync.js:74:15)
+    at resolveStandardizedName (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:54:10)
+    at loadPlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:62:20)
+    at createDescriptor (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:50
+    at Array.map (<anonymous>)
+    at createDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPluginDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:105:10)
+    at plugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:40:19)
+    at mergeChainOpts (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:319:26)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:283:7
+    at buildRootChain (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:120:22)
+    at loadPrivatePartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:85:55)
+    at Object.loadPartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:110:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:144:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:194)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:364
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:97)
+    at Object.loader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:60:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:55:12)
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-plugin-syntax-dynamic-import' from '/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master'
+- Did you mean "@babel/syntax-dynamic-import"?
+    at Function.module.exports [as sync] (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/resolve/lib/sync.js:74:15)
+    at resolveStandardizedName (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:54:10)
+    at loadPlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:62:20)
+    at createDescriptor (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:50
+    at Array.map (<anonymous>)
+    at createDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPluginDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:105:10)
+    at plugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:40:19)
+    at mergeChainOpts (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:319:26)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:283:7
+    at buildRootChain (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:120:22)
+    at loadPrivatePartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:85:55)
+    at Object.loadPartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:110:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:144:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:194)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:364
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:97)
+    at Object.loader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:60:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:55:12)
+
+ERROR in ./app/javascript/packs/router/router.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-plugin-syntax-dynamic-import' from '/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master'
+- Did you mean "@babel/syntax-dynamic-import"?
+    at Function.module.exports [as sync] (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/resolve/lib/sync.js:74:15)
+    at resolveStandardizedName (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:101:31)
+    at resolvePlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:54:10)
+    at loadPlugin (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/files/plugins.js:62:20)
+    at createDescriptor (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:154:9)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:50
+    at Array.map (<anonymous>)
+    at createDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:109:29)
+    at createPluginDescriptors (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:105:10)
+    at plugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-descriptors.js:40:19)
+    at mergeChainOpts (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:319:26)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:283:7
+    at buildRootChain (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/config-chain.js:120:22)
+    at loadPrivatePartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:85:55)
+    at Object.loadPartialConfig (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/@babel/core/lib/config/partial.js:110:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:144:26)
+    at Generator.next (<anonymous>)
+    at asyncGeneratorStep (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:103)
+    at _next (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:194)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:364
+    at new Promise (<anonymous>)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:5:97)
+    at Object.loader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:60:18)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:55:12)
+
+ERROR in ./app/javascript/packs/app.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div id="app">
+|     <p>{{ message }}</p>
+
+ERROR in ./app/javascript/packs/components/index.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <!-- 新規作成部分 -->
+
+ERROR in ./app/javascript/packs/components/contact.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <p>If you want to contact me, you send mail to below address.</p>
+
+ERROR in ./app/javascript/packs/components/about.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <p>This is a sample of TODO application with Vue.js and Ruby on Rails.</p>
+
+ERROR in ./app/javascript/packs/components/header.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <ul id="dropdown" class="dropdown-content">
+
+
+  Rendered home/index.html.erb within layouts/application (1285.0ms)
+Completed 200 OK in 4974ms (Views: 4971.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-05 15:24:34 +0900
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 2307986aea8b98025ca6
+Version: webpack 4.41.0
+Time: 91ms
+Built at: 2019/10/05 15:24:35
+                                            Asset      Size              Chunks                         Chunk Names
+                   js/app-838d1a09512226198a5f.js  4.14 KiB                 app  [emitted] [immutable]  app
+               js/app-838d1a09512226198a5f.js.map  3.51 KiB                 app  [emitted] [dev]        app
+           js/application-0199c8f11a16c51abfbf.js  9.27 KiB         application  [emitted] [immutable]  application
+       js/application-0199c8f11a16c51abfbf.js.map  3.53 KiB         application  [emitted] [dev]        application
+      js/components/about-3d7d830370437f16cc68.js  4.25 KiB    components/about  [emitted] [immutable]  components/about
+  js/components/about-3d7d830370437f16cc68.js.map  3.54 KiB    components/about  [emitted] [dev]        components/about
+    js/components/contact-9ed66da16b445e979b4b.js  4.25 KiB  components/contact  [emitted] [immutable]  components/contact
+js/components/contact-9ed66da16b445e979b4b.js.map  3.54 KiB  components/contact  [emitted] [dev]        components/contact
+     js/components/header-e16139a9826d3f0f3cd3.js  4.23 KiB   components/header  [emitted] [immutable]  components/header
+ js/components/header-e16139a9826d3f0f3cd3.js.map  3.54 KiB   components/header  [emitted] [dev]        components/header
+      js/components/index-297861e3d2b54fbe0f5f.js   4.2 KiB    components/index  [emitted] [immutable]  components/index
+  js/components/index-297861e3d2b54fbe0f5f.js.map  3.54 KiB    components/index  [emitted] [dev]        components/index
+             js/hello_vue-7b037362a6d6e6977c34.js  9.26 KiB           hello_vue  [emitted] [immutable]  hello_vue
+         js/hello_vue-7b037362a6d6e6977c34.js.map  3.52 KiB           hello_vue  [emitted] [dev]        hello_vue
+         js/router/router-cea9dd3103b8e018f8fb.js  9.25 KiB       router/router  [emitted] [immutable]  router/router
+     js/router/router-cea9dd3103b8e018f8fb.js.map  3.53 KiB       router/router  [emitted] [dev]        router/router
+                  js/todo-bd2276f80ab52102861c.js  9.23 KiB                todo  [emitted] [immutable]  todo
+              js/todo-bd2276f80ab52102861c.js.map  3.51 KiB                todo  [emitted] [dev]        todo
+                                    manifest.json  3.06 KiB                      [emitted]              
+Entrypoint app = js/app-838d1a09512226198a5f.js js/app-838d1a09512226198a5f.js.map
+Entrypoint application = js/application-0199c8f11a16c51abfbf.js js/application-0199c8f11a16c51abfbf.js.map
+Entrypoint components/about = js/components/about-3d7d830370437f16cc68.js js/components/about-3d7d830370437f16cc68.js.map
+Entrypoint components/contact = js/components/contact-9ed66da16b445e979b4b.js js/components/contact-9ed66da16b445e979b4b.js.map
+Entrypoint components/header = js/components/header-e16139a9826d3f0f3cd3.js js/components/header-e16139a9826d3f0f3cd3.js.map
+Entrypoint components/index = js/components/index-297861e3d2b54fbe0f5f.js js/components/index-297861e3d2b54fbe0f5f.js.map
+Entrypoint hello_vue = js/hello_vue-7b037362a6d6e6977c34.js js/hello_vue-7b037362a6d6e6977c34.js.map
+Entrypoint router/router = js/router/router-cea9dd3103b8e018f8fb.js js/router/router-cea9dd3103b8e018f8fb.js.map
+Entrypoint todo = js/todo-bd2276f80ab52102861c.js js/todo-bd2276f80ab52102861c.js.map
+[./app/javascript/packs/app.vue] 291 bytes {app} [built] [failed] [1 error]
+[./app/javascript/packs/application.js] 5.38 KiB {application} [not cacheable] [built] [failed] [1 error]
+[./app/javascript/packs/hello_vue.js] 5.38 KiB {hello_vue} [not cacheable] [built] [failed] [1 error]
+[./app/javascript/packs/router/router.js] 5.34 KiB {router/router} [not cacheable] [built] [failed] [1 error]
+[./app/javascript/packs/todo.js] 5.38 KiB {todo} [not cacheable] [built] [failed] [1 error]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/router/router.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-core'
+Require stack:
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compiler.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/webpack.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/validate-options.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/cli.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:13)
+    at Module._compile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at loadLoader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:739:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:1111:12
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:409:6
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:155:13
+    at eval (eval at create (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:155:9
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:112:7
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:112:7
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:82:5)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:105:10
+    at CaseSensitivePathsPlugin.getFilenamesInDir (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:50:5)
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:88:8)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:105:10
+    at Array.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:66:5)
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-core'
+Require stack:
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compiler.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/webpack.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/validate-options.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/cli.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:13)
+    at Module._compile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at loadLoader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:739:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:1111:12
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:409:6
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:155:13
+    at eval (eval at create (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:155:9
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:112:7
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:82:5)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:105:10
+    at CaseSensitivePathsPlugin.getFilenamesInDir (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:50:5)
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:88:8)
+    at checkFile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:146:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:166:7
+    at CaseSensitivePathsPlugin.primeCache (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:119:5)
+
+ERROR in ./app/javascript/packs/hello_vue.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-core'
+Require stack:
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compiler.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/webpack.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/validate-options.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/cli.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:13)
+    at Module._compile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at loadLoader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:739:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:1111:12
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:409:6
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:155:13
+    at eval (eval at create (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:155:9
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:112:7
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:82:5)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:105:10
+    at CaseSensitivePathsPlugin.getFilenamesInDir (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:50:5)
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:88:8)
+    at checkFile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:146:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:166:7
+    at CaseSensitivePathsPlugin.primeCache (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:119:5)
+
+ERROR in ./app/javascript/packs/todo.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Cannot find module 'babel-core'
+Require stack:
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compiler.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/webpack.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/validate-options.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/utils/convert-argv.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack-cli/bin/cli.js
+- /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/bin/webpack.js
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at Object.<anonymous> (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:3:13)
+    at Module._compile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:192:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/v8-compile-cache/v8-compile-cache.js:161:20)
+    at loadLoader (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/loadLoader.js:18:17)
+    at iteratePitchingLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:169:2)
+    at runLoaders (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/loader-runner/lib/LoaderRunner.js:365:2)
+    at NormalModule.doBuild (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:295:3)
+    at NormalModule.build (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModule.js:446:15)
+    at Compilation.buildModule (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:739:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/Compilation.js:1111:12
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:409:6
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/webpack/lib/NormalModuleFactory.js:155:13
+    at eval (eval at create (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:14:1)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:155:9
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:112:7
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:82:5)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:105:10
+    at CaseSensitivePathsPlugin.getFilenamesInDir (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:50:5)
+    at CaseSensitivePathsPlugin.fileExistsWithCase (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:88:8)
+    at checkFile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:146:10)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:166:7
+    at CaseSensitivePathsPlugin.primeCache (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/case-sensitive-paths-webpack-plugin/index.js:119:5)
+
+ERROR in ./app/javascript/packs/app.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div id="app">
+|     <p>{{ message }}</p>
+
+ERROR in ./app/javascript/packs/components/index.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <!-- 新規作成部分 -->
+
+ERROR in ./app/javascript/packs/components/contact.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <p>If you want to contact me, you send mail to below address.</p>
+
+ERROR in ./app/javascript/packs/components/about.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <p>This is a sample of TODO application with Vue.js and Ruby on Rails.</p>
+
+ERROR in ./app/javascript/packs/components/header.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <ul id="dropdown" class="dropdown-content">
+
+
+  Rendered home/index.html.erb within layouts/application (883.8ms)
+Completed 200 OK in 924ms (Views: 921.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-10-05 15:31:05 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+[Webpacker] Compiling…
+[Webpacker] Compilation failed:
+Hash: 80fe085e3e096c40f990
+Version: webpack 4.41.0
+Time: 256ms
+Built at: 2019/10/05 15:31:06
+                                            Asset      Size              Chunks                         Chunk Names
+                   js/app-838d1a09512226198a5f.js  4.14 KiB                 app  [emitted] [immutable]  app
+               js/app-838d1a09512226198a5f.js.map  3.51 KiB                 app  [emitted] [dev]        app
+           js/application-e21227f17a64edcee7c5.js  5.94 KiB         application  [emitted] [immutable]  application
+       js/application-e21227f17a64edcee7c5.js.map  3.53 KiB         application  [emitted] [dev]        application
+      js/components/about-3d7d830370437f16cc68.js  4.25 KiB    components/about  [emitted] [immutable]  components/about
+  js/components/about-3d7d830370437f16cc68.js.map  3.54 KiB    components/about  [emitted] [dev]        components/about
+    js/components/contact-9ed66da16b445e979b4b.js  4.25 KiB  components/contact  [emitted] [immutable]  components/contact
+js/components/contact-9ed66da16b445e979b4b.js.map  3.54 KiB  components/contact  [emitted] [dev]        components/contact
+     js/components/header-e16139a9826d3f0f3cd3.js  4.23 KiB   components/header  [emitted] [immutable]  components/header
+ js/components/header-e16139a9826d3f0f3cd3.js.map  3.54 KiB   components/header  [emitted] [dev]        components/header
+      js/components/index-297861e3d2b54fbe0f5f.js   4.2 KiB    components/index  [emitted] [immutable]  components/index
+  js/components/index-297861e3d2b54fbe0f5f.js.map  3.54 KiB    components/index  [emitted] [dev]        components/index
+             js/hello_vue-8559776bb18b7ddaf0a4.js  5.93 KiB           hello_vue  [emitted] [immutable]  hello_vue
+         js/hello_vue-8559776bb18b7ddaf0a4.js.map  3.52 KiB           hello_vue  [emitted] [dev]        hello_vue
+         js/router/router-97599756b5051f1b1cdb.js  5.95 KiB       router/router  [emitted] [immutable]  router/router
+     js/router/router-97599756b5051f1b1cdb.js.map  3.53 KiB       router/router  [emitted] [dev]        router/router
+                  js/todo-1f73b0b03bbe941fc70d.js   5.9 KiB                todo  [emitted] [immutable]  todo
+              js/todo-1f73b0b03bbe941fc70d.js.map  3.51 KiB                todo  [emitted] [dev]        todo
+                                    manifest.json  3.06 KiB                      [emitted]              
+Entrypoint app = js/app-838d1a09512226198a5f.js js/app-838d1a09512226198a5f.js.map
+Entrypoint application = js/application-e21227f17a64edcee7c5.js js/application-e21227f17a64edcee7c5.js.map
+Entrypoint components/about = js/components/about-3d7d830370437f16cc68.js js/components/about-3d7d830370437f16cc68.js.map
+Entrypoint components/contact = js/components/contact-9ed66da16b445e979b4b.js js/components/contact-9ed66da16b445e979b4b.js.map
+Entrypoint components/header = js/components/header-e16139a9826d3f0f3cd3.js js/components/header-e16139a9826d3f0f3cd3.js.map
+Entrypoint components/index = js/components/index-297861e3d2b54fbe0f5f.js js/components/index-297861e3d2b54fbe0f5f.js.map
+Entrypoint hello_vue = js/hello_vue-8559776bb18b7ddaf0a4.js js/hello_vue-8559776bb18b7ddaf0a4.js.map
+Entrypoint router/router = js/router/router-97599756b5051f1b1cdb.js js/router/router-97599756b5051f1b1cdb.js.map
+Entrypoint todo = js/todo-1f73b0b03bbe941fc70d.js js/todo-1f73b0b03bbe941fc70d.js.map
+[./app/javascript/packs/app.vue] 291 bytes {app} [built] [failed] [1 error]
+[./app/javascript/packs/application.js] 2.05 KiB {application} [built] [failed] [1 error]
+[./app/javascript/packs/hello_vue.js] 2.05 KiB {hello_vue} [built] [failed] [1 error]
+[./app/javascript/packs/router/router.js] 2.05 KiB {router/router} [built] [failed] [1 error]
+[./app/javascript/packs/todo.js] 2.05 KiB {todo} [built] [failed] [1 error]
+    + 4 hidden modules
+
+ERROR in ./app/javascript/packs/application.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "syntax-dynamic-import" specified in "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/.babelrc" at 0, attempted to resolve relative to "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master"
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:247:13)
+
+ERROR in ./app/javascript/packs/hello_vue.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "syntax-dynamic-import" specified in "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/.babelrc" at 0, attempted to resolve relative to "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master"
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:247:13)
+
+ERROR in ./app/javascript/packs/todo.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "syntax-dynamic-import" specified in "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/.babelrc" at 0, attempted to resolve relative to "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master"
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:247:13)
+
+ERROR in ./app/javascript/packs/router/router.js
+Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "syntax-dynamic-import" specified in "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/.babelrc" at 0, attempted to resolve relative to "/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master"
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/r2d2/Documents/00Develop/02vue/todo_app_with_vue_and_rails-master/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqCallback.readFileAfterOpen [as oncomplete] (fs.js:247:13)
+
+ERROR in ./app/javascript/packs/app.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div id="app">
+|     <p>{{ message }}</p>
+
+ERROR in ./app/javascript/packs/components/index.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <!-- 新規作成部分 -->
+
+ERROR in ./app/javascript/packs/components/contact.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <p>If you want to contact me, you send mail to below address.</p>
+
+ERROR in ./app/javascript/packs/components/about.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <p>This is a sample of TODO application with Vue.js and Ruby on Rails.</p>
+
+ERROR in ./app/javascript/packs/components/header.vue 1:0
+Module parse failed: Unexpected token (1:0)
+You may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders
+> <template>
+|   <div>
+|     <ul id="dropdown" class="dropdown-content">
+
+
+  Rendered home/index.html.erb within layouts/application (1003.4ms)
+Completed 200 OK in 2368ms (Views: 2359.9ms | ActiveRecord: 0.0ms)
+
+

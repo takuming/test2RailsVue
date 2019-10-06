@@ -1,0 +1,94 @@
+{
+  "app.js": "/packs/js/app-838d1a09512226198a5f.js",
+  "app.js.map": "/packs/js/app-838d1a09512226198a5f.js.map",
+  "application.js": "/packs/js/application-e21227f17a64edcee7c5.js",
+  "application.js.map": "/packs/js/application-e21227f17a64edcee7c5.js.map",
+  "components/about.js": "/packs/js/components/about-3d7d830370437f16cc68.js",
+  "components/about.js.map": "/packs/js/components/about-3d7d830370437f16cc68.js.map",
+  "components/contact.js": "/packs/js/components/contact-9ed66da16b445e979b4b.js",
+  "components/contact.js.map": "/packs/js/components/contact-9ed66da16b445e979b4b.js.map",
+  "components/header.js": "/packs/js/components/header-e16139a9826d3f0f3cd3.js",
+  "components/header.js.map": "/packs/js/components/header-e16139a9826d3f0f3cd3.js.map",
+  "components/index.js": "/packs/js/components/index-297861e3d2b54fbe0f5f.js",
+  "components/index.js.map": "/packs/js/components/index-297861e3d2b54fbe0f5f.js.map",
+  "entrypoints": {
+    "app": {
+      "js": [
+        "/packs/js/app-838d1a09512226198a5f.js"
+      ],
+      "js.map": [
+        "/packs/js/app-838d1a09512226198a5f.js.map"
+      ]
+    },
+    "application": {
+      "js": [
+        "/packs/js/application-e21227f17a64edcee7c5.js"
+      ],
+      "js.map": [
+        "/packs/js/application-e21227f17a64edcee7c5.js.map"
+      ]
+    },
+    "components/about": {
+      "js": [
+        "/packs/js/components/about-3d7d830370437f16cc68.js"
+      ],
+      "js.map": [
+        "/packs/js/components/about-3d7d830370437f16cc68.js.map"
+      ]
+    },
+    "components/contact": {
+      "js": [
+        "/packs/js/components/contact-9ed66da16b445e979b4b.js"
+      ],
+      "js.map": [
+        "/packs/js/components/contact-9ed66da16b445e979b4b.js.map"
+      ]
+    },
+    "components/header": {
+      "js": [
+        "/packs/js/components/header-e16139a9826d3f0f3cd3.js"
+      ],
+      "js.map": [
+        "/packs/js/components/header-e16139a9826d3f0f3cd3.js.map"
+      ]
+    },
+    "components/index": {
+      "js": [
+        "/packs/js/components/index-297861e3d2b54fbe0f5f.js"
+      ],
+      "js.map": [
+        "/packs/js/components/index-297861e3d2b54fbe0f5f.js.map"
+      ]
+    },
+    "hello_vue": {
+      "js": [
+        "/packs/js/hello_vue-8559776bb18b7ddaf0a4.js"
+      ],
+      "js.map": [
+        "/packs/js/hello_vue-8559776bb18b7ddaf0a4.js.map"
+      ]
+    },
+    "router/router": {
+      "js": [
+        "/packs/js/router/router-97599756b5051f1b1cdb.js"
+      ],
+      "js.map": [
+        "/packs/js/router/router-97599756b5051f1b1cdb.js.map"
+      ]
+    },
+    "todo": {
+      "js": [
+        "/packs/js/todo-1f73b0b03bbe941fc70d.js"
+      ],
+      "js.map": [
+        "/packs/js/todo-1f73b0b03bbe941fc70d.js.map"
+      ]
+    }
+  },
+  "hello_vue.js": "/packs/js/hello_vue-8559776bb18b7ddaf0a4.js",
+  "hello_vue.js.map": "/packs/js/hello_vue-8559776bb18b7ddaf0a4.js.map",
+  "router/router.js": "/packs/js/router/router-97599756b5051f1b1cdb.js",
+  "router/router.js.map": "/packs/js/router/router-97599756b5051f1b1cdb.js.map",
+  "todo.js": "/packs/js/todo-1f73b0b03bbe941fc70d.js",
+  "todo.js.map": "/packs/js/todo-1f73b0b03bbe941fc70d.js.map"
+}
